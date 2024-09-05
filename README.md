@@ -34,7 +34,7 @@ npm run dev
 3. Open [http://localhost:3000](http://localhost:3000) with browser to see the result.
 
 ## Time Management
-Total time: 7 h 40 min.
+__Total time: 7 h 40 min.__
 
 Divided by areas of focus:
 - ### Project setup
