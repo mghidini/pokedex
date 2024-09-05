@@ -45,6 +45,6 @@ Divided by areas of focus.
     2h 
 - ### Styling
     1 h
-- ### Project setup
+- ### Testing
     1 h 
 
