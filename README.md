@@ -34,7 +34,9 @@ npm run dev
 3. Open [http://localhost:3000](http://localhost:3000) with browser to see the result.
 
 ## Time Management
-Divided by areas of focus.
+Total time: 7 h 40 min.
+
+Divided by areas of focus:
 - ### Project setup
     10 min
 - ### Learning about _Next.js dynamic routes, tailwind, server side rendering_
@@ -46,5 +48,5 @@ Divided by areas of focus.
 - ### Styling
     1 h
 - ### Testing
-    1 h 
+    1 h
 
