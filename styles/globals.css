@@ -21,17 +21,6 @@ h1 {
     text-align: center;
 }
 
-h3 {
-  font-family: "Press Start 2P", sans-serif;
-  margin-top: 40px;
-  font-size: 24px;
-}
-
-h4 {
-  margin-top: 40px;
-  font-size: 20px;
-}
-
 p {
     font-family: "Press Start 2P", sans-serif;
     @apply text-slate-700 text-center;

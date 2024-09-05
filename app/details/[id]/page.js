@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Fetch Pokémon details from PokeAPI
+{/* Fetch Pokémon details from PokeAPI */}
 async function fetchPokemonDetails(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     if (!response.ok) {
@@ -11,10 +11,9 @@ async function fetchPokemonDetails(id) {
 }
 
 export default async function PokemonDetailsPage({ params }) {
-    const { id } = params; // Extract Pokémon ID from URL parameters
-    const pokemonID = parseInt(id, 10); // Convert ID to int
+    const { id } = params;
+    const pokemonID = parseInt(id, 10); // Convert ID to int to calculate prev and next pokemon
 
-    // Fetch Pokémon details server-side
     const pokemon = await fetchPokemonDetails(id);
 
     const nextPokemon = pokemonID + 1;
@@ -24,14 +23,17 @@ export default async function PokemonDetailsPage({ params }) {
         <div className='flex flex-col flex-grow items-center justify-center min-h-screen'>
           
             <div className='w-full max-w-4xl p-6 bg-emerald-600 rounded-md'>
+              {/* Name and ID */}
               <h1 className="text-3xl font-bold text-slate-700 p-6 text-center break-words">{pokemon.name}</h1>
               <p className='text-center'>pokedex number: {pokemon.id}</p>
 
+              {/* Images */}
               <div className="flex justify-center space-x-4 my-6">
                 <img src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} className="w-1/2 md:w-1/3 lg:w-1/4" />
                 <img src={pokemon.sprites.front_shiny} alt={`${pokemon.name} shiny`} className="w-1/2 md:w-1/3 lg:w-1/4" />
               </div>
 
+              {/* Info section */}
               <p>type: {pokemon.types.map(typeInfo => typeInfo.type.name).join(', ')}</p>
               <p>height: {pokemon.height}</p>
               <p>weight: {pokemon.weight}</p>
@@ -45,6 +47,7 @@ export default async function PokemonDetailsPage({ params }) {
               </div>
             </div>
 
+            {/* Navigation buttons */}
             <div className='flex flex-wrap justify-center w-full max-w-4xl'>
             {previousPokemon !== null && (
                 <a href={`/details/${previousPokemon}`} class='actionButton'>Previous Pokemon</a>

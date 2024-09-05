@@ -4,8 +4,8 @@ const layout = ({children}) => {
   return (
     <html lang="en">
       <head>
-        <title>Pokemon App</title>
-        <meta name="description" content="A basic Next.js application" />
+        <title>Pokédex App</title>
+        <meta name="description" content="A Next.js application" />
       </head>
       <body>
         <header>
@@ -22,7 +22,7 @@ const layout = ({children}) => {
 
         <div>
           <footer className='bg-slate-700 p-10'>
-            <p className='text-center text-white'>&copy; 2024 Matilde Ghidini.</p>
+            <p className='text-center text-white'>&copy; 2024 Matilde Ghidini</p>
           </footer>
         </div>
 
